@@ -13,12 +13,11 @@
 #ifndef HEADER_HPP
 # define HEADER_HPP
 
-# include "./Contact.hpp"
-# include "./PhoneBook.hpp"
 # include <iostream>
 # include <string>
 # include <iomanip>
 
 std::string	get_check_input(std::string input);
+bool		is_number(std::string str);
 
 #endif

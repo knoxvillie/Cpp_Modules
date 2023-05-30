@@ -20,7 +20,7 @@ std::string	Contact::get_last_name(void) {
 	return (this->_last_name);
 }
 
-std::string	Contact::get_nick_name() {
+std::string	Contact::get_nick_name(void) {
 	return (this->_nick_name);
 }
 
@@ -33,5 +33,19 @@ std::string	Contact::get_darkest_secret(void) {
 }
 
 void	Contact::get_full_info(void) {
+std::cout << "******+<CONTACT>+******"
+std::cout << "First Name: " << std::endl;
+std::cout << "Last Name: " << std::endl;
+std::cout << "Nickname: " << std::endl;
+std::cout << "Phone Number: " << std::endl;
+std::cout << "Darkest Secret: " << std::endl;
+std::cout << "-*********************-" << std::endl;
+}
 
+void	Contact::set_full_info(void) {
+	this->_first_name = get_check_input("First Name: ");
+	this->_last_name = get_check_input("Last Name: ");
+	this->_nick_name = get_check_input("Nickname: ");
+	this->_phone_number = get_check_input("Phone Number: ");
+	this->_darkest_secret = get_check_input("Darkest Secret: ");
 }

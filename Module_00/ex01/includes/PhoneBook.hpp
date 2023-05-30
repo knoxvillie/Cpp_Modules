@@ -13,15 +13,21 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include "Header.hpp"
+# include "./Contact.hpp"
+# include "./header.hpp"
 
 class PhoneBook {
+	private:
+		short	index;
+		Contact	_contacts[8];
+
 	public:
 		PhoneBook(void);
 		~PhoneBook();
-
-	private:
-
+		void	add(void);
+		void	search(void);
+		short	get_num_contact(void);
+		Contact	get_contact(short index);
 
 };
 
