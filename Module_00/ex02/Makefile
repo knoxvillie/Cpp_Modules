@@ -1,12 +1,11 @@
-NAME	= phonebook
+NAME	= bank
 
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -g
 VERS	= -std=c++98
 
-SRCDIR	=	./src/
-SRC		=	Contact.cpp main.cpp PhoneBook.cpp src.cpp
-OBJ		= $(addprefix $(SRCDIR), $(SRC:.cpp=.o))
+SRC		= Account.cpp tests.cpp
+OBJ		= $(SRC:.cpp=.o)
 
 all: $(NAME)
 
