@@ -16,14 +16,13 @@ std::string	get_check_input(std::string str)
 {
 	std::string	input;
 
-	input = "";
-	while (input.empty())
-	{
+	do {
 		std::cout << str;
-		if (!(std::getline(std::cin, input)))
-			return (std::cout << "Error reading input\n", exit(1));
-		std::cout << std::endl;
-	}
+		if (!std::getline(std::cin, input)) {
+			std::cout << "Error getline\n";
+			exit (1);
+		}
+	} while (input.empty());
 	return (input);
 }
 
@@ -36,4 +35,16 @@ bool	is_number(std::string str)
 			return (false);
 	}
 	return (true);
+}
+
+std::string	string_form(std::string str)
+{
+	std::string	format;
+	if (str.length() <= 9)
+		return (str);
+	else
+	{
+		format = str.substr(0, 9).append(".");
+		return (format);
+	}
 }

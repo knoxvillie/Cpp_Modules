@@ -18,6 +18,6 @@
 # include <iomanip>
 
 std::string	get_check_input(std::string input);
+std::string	string_form(std::string str);
 bool		is_number(std::string str);
-
 #endif

@@ -4,8 +4,8 @@ CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -g
 VERS	= -std=c++98
 
-SRCDIR	=	./src/
-SRC		=	Contact.cpp main.cpp PhoneBook.cpp src.cpp
+SRCDIR	= ./src/
+SRC		= Contact.cpp main.cpp PhoneBook.cpp src.cpp
 OBJ		= $(addprefix $(SRCDIR), $(SRC:.cpp=.o))
 
 all: $(NAME)
@@ -20,3 +20,5 @@ fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
+
+.PHONY:

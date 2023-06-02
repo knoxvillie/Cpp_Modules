@@ -18,17 +18,16 @@
 
 class PhoneBook {
 	private:
-		short	index;
+		int		_index;
+		int		_size;
 		Contact	_contacts[8];
 
 	public:
 		PhoneBook(void);
-		~PhoneBook();
 		void	add(void);
 		void	search(void);
-		short	get_num_contact(void);
-		Contact	get_contact(short index);
-
+		void	search_display(int spc);
+		Contact	get_contact(int index);
 };
 
 #endif

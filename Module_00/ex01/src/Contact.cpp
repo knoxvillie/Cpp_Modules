@@ -12,7 +12,7 @@
 
 #include "../includes/Contact.hpp"
 
-std::string	Contac::get_first_name(void) {
+std::string	Contact::get_first_name(void) {
 	return (this->_first_name);
 }
 
@@ -33,13 +33,13 @@ std::string	Contact::get_darkest_secret(void) {
 }
 
 void	Contact::get_full_info(void) {
-std::cout << "******+<CONTACT>+******"
-std::cout << "First Name: " << std::endl;
-std::cout << "Last Name: " << std::endl;
-std::cout << "Nickname: " << std::endl;
-std::cout << "Phone Number: " << std::endl;
-std::cout << "Darkest Secret: " << std::endl;
-std::cout << "-*********************-" << std::endl;
+std::cout << "\n******-<CONTACT>-******" << std::endl;
+std::cout << "* First Name: " << this->get_first_name() << std::endl;
+std::cout << "* Last Name: " << this->get_last_name() <<std::endl;
+std::cout << "* Nickname: " << this->get_nick_name() << std::endl;
+std::cout << "* Phone Number: " << this->get_phone_number() << std::endl;
+std::cout << "* Darkest Secret: " << this->get_darkest_secret() << std::endl;
+std::cout << "*********************\n" << std::endl;
 }
 
 void	Contact::set_full_info(void) {
