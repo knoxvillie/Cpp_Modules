@@ -1,6 +1,5 @@
 COMP	= c++
-FLAGS	= -Wall -Wextra -Werror -g
-VERS	= -std=c++98
+CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
 NAME	= megaphone
 SRC		= megaphone.cpp
@@ -8,7 +7,7 @@ SRC		= megaphone.cpp
 all: $(NAME)
 
 $(NAME):
-		$(COMP) $(FLAGS) $(VERS) $(SRC) -o $@
+		$(COMP) $(FLAGS) $(SRC) -o $@
 
 clean:
 		rm -f $(NAME)
@@ -17,4 +16,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY:
+.PHONY: all clean fclean re

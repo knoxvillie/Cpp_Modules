@@ -1,8 +1,7 @@
 NAME	= bank
 
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -g
-VERS	= -std=c++98
+CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
 SRC		= Account.cpp tests.cpp
 OBJ		= $(SRC:.cpp=.o)
@@ -10,7 +9,7 @@ OBJ		= $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		$(CC) $(CFLAGS) $(VERS) $(OBJ) -o $@
+		$(CC) $(CFLAGS) $(OBJ) -o $@
 
 clean:
 		rm -f $(OBJ)
