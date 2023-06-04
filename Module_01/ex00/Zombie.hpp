@@ -6,7 +6,7 @@
 /*   By: kfaustin <kfaustin@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 15:50:54 by kfaustin          #+#    #+#             */
-/*   Updated: 2023/06/03 16:52:40 by kfaustin         ###   ########.fr       */
+/*   Updated: 2023/06/04 20:44:28 by kfaustin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 
 class Zombie {
+	
 	private:
 		std::string	_name;
 
