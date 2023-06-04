@@ -1,4 +1,5 @@
 #include "../includes/PhoneBook.hpp"
+#include <cstdlib>
 
 PhoneBook::PhoneBook() {
 	this->_index = 0;
@@ -36,7 +37,7 @@ void	PhoneBook::search() {
 			std::cout << std::endl << input << " is an invalid input, please try again" << std::endl;
 			continue ;
 		}
-		num = stoi(input);
+		num = std::atoi(input.c_str());
 		if (num < 0 || num >= this->_size || num > 7)
 			std::cout << "\nError: Index out of range, please try again\n" << std::endl;
 		else

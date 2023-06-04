@@ -28,7 +28,7 @@ std::string	get_check_input(std::string str)
 
 bool	is_number(std::string str)
 {
-	int	i;
+	size_t	i;
 
 	for (i = 0; i < str.size(); i++){
 		if (str[i] < '0' || str[i] > '9')

@@ -1,8 +1,7 @@
 NAME	= phonebook
 
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -g
-VERS	= -std=c++98
+CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
 SRCDIR	= ./src/
 SRC		= Contact.cpp main.cpp PhoneBook.cpp src.cpp
@@ -11,7 +10,7 @@ OBJ		= $(addprefix $(SRCDIR), $(SRC:.cpp=.o))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		$(CC) $(CFLAGS) $(VERS) $(OBJ) -o $@
+		$(CC) $(CFLAGS) $(OBJ) -o $@
 
 clean:
 		rm -f $(OBJ)
@@ -21,4 +20,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY:
+.PHONY: all clean fclean re
