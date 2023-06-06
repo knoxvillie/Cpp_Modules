@@ -1,9 +1,9 @@
-NAME	= launcher
+NAME	= harl
 
 CXX		= c++
 CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
-SRC		= main.cpp
+SRC		= Harl.cpp main.cpp
 
 all: $(NAME)
 
@@ -14,6 +14,5 @@ clean:
 		rm -f $(NAME)
 
 fclean: clean
-		rm -f *.replace
 
 re: fclean all
