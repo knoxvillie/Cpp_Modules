@@ -12,7 +12,7 @@
 
 NAME	= weapon
 
-CPP		= c++
+CXX		= c++
 CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
 SRC		= HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
@@ -21,7 +21,7 @@ OBJ		= $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		$(CPP) $(CPPFLAGS) $(OBJ) -o $@
+		$(CXX) $(CPPFLAGS) $(OBJ) -o $@
 
 clean:
 		rm -f $(OBJ)

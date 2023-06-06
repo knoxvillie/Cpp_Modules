@@ -1,6 +1,6 @@
 NAME	= phonebook
 
-CC		= c++
+CXX		= c++
 CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
 SRCDIR	= ./src/
@@ -10,7 +10,7 @@ OBJ		= $(addprefix $(SRCDIR), $(SRC:.cpp=.o))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		$(CC) $(CFLAGS) $(OBJ) -o $@
+		$(CXX) $(CPPFLAGS) $(OBJ) -o $@
 
 clean:
 		rm -f $(OBJ)
@@ -20,4 +20,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re CC

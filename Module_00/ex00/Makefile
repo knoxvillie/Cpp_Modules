@@ -1,13 +1,14 @@
-COMP	= c++
+NAME	= megaphone
+
+CXX		= c++
 CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
-NAME	= megaphone
 SRC		= megaphone.cpp
 
 all: $(NAME)
 
 $(NAME):
-		$(COMP) $(FLAGS) $(SRC) -o $@
+		$(CXX) $(CPPFLAGS) $(SRC) -o $@
 
 clean:
 		rm -f $(NAME)

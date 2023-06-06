@@ -1,4 +1,4 @@
-NAME	= ref
+NAME	= launcher
 
 CXX		= c++
 CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
@@ -14,5 +14,6 @@ clean:
 		rm -f $(NAME)
 
 fclean: clean
+		rm -f *.replace
 
 re: fclean all
