@@ -29,7 +29,11 @@ void	PhoneBook::search() {
 	{
 		this->search_display(10);
 		std::cout << "\nPlease enter the index of the contact: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+		{
+			std::cout << "Error on getline" << std::endl;
+			break ;
+		}
 		if (input == "EXIT")
 			break ;
 		if (input.empty() || !is_number(input))

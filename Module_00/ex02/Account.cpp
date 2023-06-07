@@ -13,7 +13,7 @@ void	Account::_displayTimestamp(void) {
 	char		strTime[100];
 	std::time_t	actualTime;
 
-	actualTime = std::time(nullptr);
+	actualTime = std::time(NULL);
 	std::strftime(strTime, sizeof (strTime), "%Y%m%d_%H%M%S", std::localtime(&actualTime));
 	std::cout << "[" << strTime << "] ";
 }
