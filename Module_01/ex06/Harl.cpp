@@ -31,4 +31,31 @@ void	Harl::complain(std::string level){
 	}
 }
 
+void	Harl::filter(std::string level)
+{
+	int			filter_case;
+	std::string	lvl[] = {"DEBUG", "INFO", "WARNING", "ERROR", "FINAL"};
 
+	for (filter_case = 0; (lvl[filter_case] != "FINAL" && lvl[filter_case] != level); filter_case++)
+		filter_case++;
+	switch (filter_case) {
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+			break;
+		case 0:
+			std::cout << std::endl;
+			this->complain("DEBUG");
+
+		case 1:
+			std::cout << std::endl;
+			this->complain("INFO");
+
+		case 2:
+			std::cout << std::endl;
+			this->complain("WARNING");
+
+		case 3:
+			std::cout << std::endl;
+			this->complain("ERROR");
+	}
+}
