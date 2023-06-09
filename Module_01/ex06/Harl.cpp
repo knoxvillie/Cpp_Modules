@@ -36,8 +36,7 @@ void	Harl::filter(std::string level)
 	int			filter_case;
 	std::string	lvl[] = {"DEBUG", "INFO", "WARNING", "ERROR", "FINAL"};
 
-	for (filter_case = 0; (lvl[filter_case] != "FINAL" && lvl[filter_case] != level); filter_case++)
-		filter_case++;
+	for (filter_case = 0; (lvl[filter_case] != "FINAL" && lvl[filter_case] != level); filter_case++);
 	switch (filter_case) {
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
