@@ -6,7 +6,7 @@
 /*   By: kfaustin <kfaustin@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 20:49:29 by kfaustin          #+#    #+#             */
-/*   Updated: 2023/06/04 20:50:02 by kfaustin         ###   ########.fr       */
+/*   Updated: 2023/06/09 12:42:36 by kfaustin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int	main(int argc, char **argv)
 				pos += s2.length();
 			}
 		}
+		file_out << content;
 		std::cout << content << std::endl;
 	}
 	std::cout << changes << " words were change" << std::endl;
