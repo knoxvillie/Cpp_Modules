@@ -1,11 +1,11 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed() : _val(0) {
-	std::cout << "Default constructor called" << std::endl;
+	//std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &data) {
@@ -50,3 +50,53 @@ std::ostream &operator<<( std::ostream &os, const Fixed &fixed) {
 }
 
 /* Operator Methods */
+bool	Fixed::operator>(const Fixed &data) {
+	return (this->_val > data.getRawBits());
+}
+
+bool	Fixed::operator>=(const Fixed &data) {
+	return (this->_val >= data.getRawBits());
+}
+
+bool	Fixed::operator<(const Fixed &data) {
+	return (this->_val < data.getRawBits());
+}
+
+bool	Fixed::operator<=(const Fixed &data) {
+	return (this->_val <= data.getRawBits());
+}
+
+bool	Fixed::operator==(const Fixed &data) {
+	return (this->_val == data.getRawBits());
+}
+
+bool	Fixed::operator!=(const Fixed &data) {
+	return (this->_val != data.getRawBits());
+}
+
+//--------------------
+
+Fixed	Fixed::operator+(const Fixed &data) {
+	return (this->toFloat() + data.toFloat());
+}
+
+Fixed	Fixed::operator-(const Fixed &data) {
+	return (this->toFloat() - data.toFloat());
+}
+
+Fixed	Fixed::operator*(const Fixed &data) {
+	return (this->toFloat() * data.toFloat());
+}
+
+Fixed	Fixed::operator/(const Fixed &data) {
+	return (this->toFloat() / data.toFloat());
+}
+
+Fixed	&Fixed::operator++(void) {
+	this->_val += 1;
+	return (*this);
+}
+
+Fixed	Fixed::operator++(int) {
+	Fixed	tmp;
+}

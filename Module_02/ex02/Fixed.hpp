@@ -24,6 +24,20 @@ class Fixed {
 
 		//Comparison:
 		bool	operator>(const Fixed &data);
+		bool	operator>=(const Fixed &data);
+		bool	operator<(const Fixed &data);
+		bool	operator<=(const Fixed &data);
+		bool	operator==(const Fixed &data);
+		bool	operator!=(const Fixed &data);
+
+		Fixed	operator+(const Fixed &data);
+		Fixed	operator-(const Fixed &data);
+		Fixed	operator*(const Fixed &data);
+		Fixed	operator/(const Fixed &data);
+
+		Fixed	&operator++(void);
+		Fixed	operator++(int);
+
 };
 
 std::ostream &operator<<( std::ostream &os, const Fixed &fixed);
