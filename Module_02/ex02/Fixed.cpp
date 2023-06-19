@@ -9,7 +9,7 @@ Fixed::~Fixed() {
 }
 
 Fixed::Fixed(const Fixed &data) {
-	std::cout << "Copy constructor called\n";
+	//std::cout << "Copy constructor called\n";
 	this->_val = data.getRawBits();
 }
 
@@ -22,13 +22,13 @@ Fixed::Fixed(const float num) {
 }
 
 Fixed	&Fixed::operator=(const Fixed &data) {
-	std::cout << "Copy assigment operator called\n";
+	//std::cout << "Copy assigment operator called\n";
 	this->_val = data.getRawBits();
 	return (*this);
 }
 
 int		Fixed::getRawBits(void) const {
-	std::cout << "getRawBits member function called\n";
+	//std::cout << "getRawBits member function called\n";
 	return (this->_val);
 }
 
@@ -74,7 +74,7 @@ bool	Fixed::operator!=(const Fixed &data) {
 	return (this->_val != data.getRawBits());
 }
 
-//--------------------
+//--
 
 Fixed	Fixed::operator+(const Fixed &data) {
 	return (this->toFloat() + data.toFloat());
@@ -92,11 +92,46 @@ Fixed	Fixed::operator/(const Fixed &data) {
 	return (this->toFloat() / data.toFloat());
 }
 
+//--
+
 Fixed	&Fixed::operator++(void) {
 	this->_val += 1;
 	return (*this);
 }
 
 Fixed	Fixed::operator++(int) {
-	Fixed	tmp;
+	Fixed	tmp = *this;
+
+	this->_val += 1;
+	return (tmp);
+}
+
+Fixed	&Fixed::operator--(void) {
+	this->_val -= 1;
+	return (*this);
+}
+
+Fixed	Fixed::operator--(int) {
+	Fixed	tmp = *this;
+
+	tmp._val -= 1;
+	return (tmp);
+}
+
+//--
+
+Fixed	&Fixed::min(Fixed &var1, Fixed &var2) {
+	return (var1.toFloat() < var2.toFloat()) ? var1 : var2;
+}
+
+Fixed const	&Fixed::min(Fixed const &var1, Fixed const &var2) {
+	return (var1.toFloat() < var2.toFloat()) ? var1 : var2;
+}
+
+Fixed	&Fixed::max(Fixed &var1, Fixed &var2) {
+	return (var1.toFloat() > var2.toFloat()) ? var1 : var2;
+}
+
+Fixed const	&Fixed::max(Fixed const &var1, Fixed const &var2) {
+	return (var1.toFloat() > var2.toFloat()) ? var1 : var2;
 }

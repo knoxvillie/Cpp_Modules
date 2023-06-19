@@ -1,43 +1,36 @@
 #include "Point.hpp"
-#include "Fixed.hpp"
 
-Point::Point() : i(0), j(0){
-//	this->i = 0;
-//	this->j = 0;
+Point::Point() : _x(0), _y(0){
+//	this->_x = 0;
+//	this->_y = 0;
 }
 
 Point::~Point() {
 //	std::cout << "Destructor called\n";
 }
 
-Point::Point(const float a1, const floar b1) : i(a1), j(b1) {
-//	this->i = a1;
-//	this->j = b1;
+Point::Point(const float i, const float j) : _x(i), _y(j) {
+//	this->_x = i;
+//	this->_y = j;
 }
 
-Point::Point(const Point &data) : i(data.getI()), j(data.getJ()) {
-//	this->i = data.getI();
-//	this->j = data.getJ();
+Point::Point(const Point &data) : _x(data.getI()), _y(data.getJ()) {
+//	this->_x = data.getI();
+//	this->_y = data.getJ();
 }
 
 Point	&Point::operator=(const Point &data) {
 	if (this == &data)
 		return (*this);
-	this->i = data.getI();
-	this->j = data.getJ();
+	(Fixed)this->_x = data.getI();
+	(Fixed)this->_y = data.getJ();
 	return (*this);
 }
 
-bool	Point::operator==(Point &data) {
-	if (this->i == data.getI() && this.j == data.getJ())
-		return (true);
-	return (false);
+Fixed	Point::getI(void) const {
+	return (this->_x);
 }
 
-Fixed	getI(void) const {
-	return (this->i);
-}
-
-Fixed	getJ(void) const {
-	return (this->j);
+Fixed	Point::getJ(void) const {
+	return (this->_y);
 }

@@ -1,5 +1,3 @@
-
-
 NAME	= bin
 
 CXX		= c++

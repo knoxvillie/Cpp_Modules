@@ -1,11 +1,9 @@
-
-
-NAME	= bin
+NAME	= triangle
 
 CXX		= c++
 CPPFLAGS= -Wall -Wextra -Werror -g -std=c++98
 
-SRC		= Fixed.cpp main.cpp
+SRC		= bsp.cpp Fixed.cpp main.cpp Point.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 all: $(NAME)
